@@ -144,7 +144,7 @@ const Jobs = () => {
       if (!applicantEmail) return
 
       await axios.post(
-        'http://localhost:5000/api/applications/apply',
+        'http://${import.meta.env.VITE_API_URL}/api/applications/apply',
         {
           jobTitle: job.title,
           company: job.company,
